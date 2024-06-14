@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/style.css">
+<style>
+    
+</style>
+<body>
+    <h1>This page is respond to @ <%=data.name%></h1>
+    <p>Followers <%=data.followers%>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    
+    Following <%=data.following%>
+    </p>
+    <button>Follow</button>
+    <button>Message</button>
+    <hr>
+    <h3>Post</h3>
+    <%for(let post of data.posts){ %>
+        <img src="<%=post.image%>" alt="">
+        <p>Likes <%=post.likes%>
+        &nbsp;&nbsp;&nbsp; comments <%=post.comments%>
+        </p>
+    <% }%>
+   
+    <%-include("includes/footer.ejs")%>
+    
+</body>
+<script src="/app.js"></script>
+</html>
